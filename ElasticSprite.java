@@ -409,7 +409,7 @@ public class ElasticSprite extends Sprite implements Drawable, Transformable{
         m_bilinearShader.setParameter("c2", m_vertices[2].color);
         m_bilinearShader.setParameter("c3", m_vertices[3].color);
         //states.shader = bilinearShader;
-        new RenderStates(states.blendMode, states.transform, states.texture, m_bilinearShader); //RenderStates(BlendMode blendMode, Transform transform, ConstTexture texture, ConstShader shader) 
+        states=new RenderStates(states.blendMode, states.transform, states.texture, m_bilinearShader); //RenderStates(BlendMode blendMode, Transform transform, ConstTexture texture, ConstShader shader) 
         target.draw(m_vertices, m_primitiveType, states);
       }
     }
